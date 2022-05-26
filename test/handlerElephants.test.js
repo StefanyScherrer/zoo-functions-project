@@ -14,12 +14,19 @@ describe('Testes da função HandlerElephants', () => {
     expect(handlerElephants('location')).toBe('NW');
   });
   it('Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.', () => {
-    expect(handlerElephants()).toBe(undefined);
+    expect(handlerElephants()).toBeUndefined();
   });
   it('Verifica se computeData retorna um objeto', () => {
     expect(typeof handlerElephants('computeData')).toBe('object');
   });
   it('Verifica se popularity retorna um nº', () => {
     expect(typeof handlerElephants('popularity')).toBe('number');
+  });
+  it('Verifica se retorna corretamente a popularidade dos elefantes', () => {
+    expect(handlerElephants('popularity')).toBe(5);
+  });
+
+  it('Verifica se handlerElephants é uma função', () => {
+    expect(typeof handlerElephants).toBe('function');
   });
 });
