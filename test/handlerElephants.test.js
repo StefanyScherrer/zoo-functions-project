@@ -29,4 +29,8 @@ describe('Testes da função HandlerElephants', () => {
   it('Verifica se handlerElephants é uma função', () => {
     expect(typeof handlerElephants).toBe('function');
   });
+  it('Verifica se o argumento availability deve retornar um array de dias da semana que não contém Monday',
+    () => {
+      expect(handlerElephants('availability')).toEqual(['Friday', 'Saturday', 'Sunday', 'Tuesday']);
+    });
 });
